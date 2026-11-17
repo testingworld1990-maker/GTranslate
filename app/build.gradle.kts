@@ -80,6 +80,8 @@ dependencies {
     implementation("androidx.media3:media3-session:1.4.1")
     implementation("androidx.media3:media3-datasource-okhttp:1.4.1")
 
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")

@@ -4,6 +4,8 @@ import android.content.ContentResolver
 import android.content.Context
 import androidx.media3.exoplayer.ExoPlayer
 import com.tanglishvideotranslator.data.LibraryRepository
+import com.tanglishvideotranslator.settings.DataStoreSettingsStore
+import com.tanglishvideotranslator.settings.SettingsStore
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,4 +31,9 @@ object AppModule {
     @Singleton
     fun provideLibraryRepository(contentResolver: ContentResolver): LibraryRepository =
         LibraryRepository(contentResolver)
+
+    @Provides
+    @Singleton
+    fun provideSettingsStore(@ApplicationContext context: Context): SettingsStore =
+        DataStoreSettingsStore(context)
 }

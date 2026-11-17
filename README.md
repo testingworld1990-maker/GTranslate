@@ -9,7 +9,10 @@ A Kotlin + Jetpack Compose Android app for local and streaming video playback wi
 - Library / recents / favorites / settings navigation
 - MVVM + Hilt + Coroutines/Flow architecture
 - Material 3 theme
-- Android app skeleton for later subtitle, export, and settings features
+- Gemini API integration scaffold with retry/backoff and quota handling
+- Subtitle overlay and Room cache foundation
+- Export formatting for SRT, VTT, and TXT
+- DataStore + encrypted settings for Gemini key storage
 
 ## Phase roadmap
 
@@ -40,11 +43,11 @@ A Kotlin + Jetpack Compose Android app for local and streaming video playback wi
 1. Open the app settings screen.
 2. Paste your Gemini API key.
 3. Review the disclosure and confirm consent the first time the app uses AI translation.
-4. Keep the key in the encrypted storage flow when implemented in later phases. The initial scaffold keeps the value in app state while the encrypted storage layer is being added.
+4. The API key is kept in encrypted preferences for the settings layer.
 
 ## Important notes
 
-This repository is structured as a working base for the full product described in the project brief. Some advanced features are intentionally stubbed in the first phase so the project remains stable and compilable as the app grows.
+This repository is structured as a working base for the full product described in the project brief. The advanced translation workflow and playback details are built incrementally to keep the project stable and compilable.
 
 ## Build command
 
